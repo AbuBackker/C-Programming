@@ -1,3 +1,7 @@
+/********
+ Part:01
+********/
+
 // 01. Show "Hello World"
 
 #include <stdio.h>
@@ -72,7 +76,29 @@ void main(){
      getch();
 }
 
-// 05. Define The Area of Rectangle:
+// 05. Determine The Area of Triangle:
+
+#include <stdio.h>
+#include <conio.h>
+
+void main(){
+
+     float a, b, area;
+
+     printf( "Enter Your First Value =" );
+     scanf( "%d", &a );
+
+     printf( "Enter Your Second Valuer =" );
+     scanf( "%d", &b );
+
+     area = 0.5*a*b;
+
+     printf( "Your Area is = %f", area  );
+
+     getch();
+}
+
+// 06. Determine The Area of Rectangle:
 
 #include <stdio.h>
 #include <conio.h>
@@ -94,7 +120,7 @@ void main(){
      getch();
 }
 
-// 06. Define Area of  The Circle:
+// 07. Determine Area of  The Circle:
 
 #include <stdio.h>
 #include <conio.h>
@@ -113,7 +139,7 @@ void main(){
      getch();
 }
 
-// 07. Define Circumference of  The Circle:
+// 08. Determine Circumference of  The Circle to Three Decimal Places:
 
 #include <stdio.h>
 #include <conio.h>
@@ -123,11 +149,226 @@ void main(){
      float r, circumference;
 
      printf( "Input Radius =" );
-     scanf( "%d", &r );
+     scanf( "%f", &r );
 
      circumference = 2*3.1416*r;
 
-     printf( "Your Area is = %f", circumference  );
+     printf( "Your Area is = %0.3f", circumference  );
+
+     getch();
+}
+
+// 09. Determine the Square Root Function:
+
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+void main(){
+
+     float a, x;
+
+     printf( "Input Your Number =" );
+     scanf( "%f", &a );
+
+     x = sqrt(a);
+
+     printf( "Your Answer is = %f", x );
+
+     getch();
+}
+
+// 10. Determine the Power Function:
+
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+void main(){
+
+     float a, p;
+
+     printf( "Input Your Number =" );
+     scanf( "%f", &a );
+
+     p = pow(a);
+
+     printf( "Your Answer is = %f", p );
+
+     getch();
+}
+
+// 11. Determine Celsius to Fahrenheit: 
+
+#include <stdio.h>
+#include <conio.h>
+
+void main(){
+
+     float c, f;
+
+     printf( "Input Your Number =" );
+     scanf( "%f", &c );
+
+     f = (9*c) % 5 + 32;
+
+     printf( "Your Answer is = %f", f );
+
+     getch();
+}
+
+// 11. Determine Fahrenheit to Celsius: 
+
+#include <stdio.h>
+#include <conio.h>
+
+void main(){
+
+     float f, c;
+
+     printf( "Input Your Number =" );
+     scanf( "%f", &f );
+
+     c = 5*(f - 32) % 9;
+
+     printf( "Your Answer is = %f", c );
+
+     getch();
+}
+
+
+/*******************************
+ Part:02 (Conditional Statement)
+********************************/
+
+/* (A) if statement
+   (B) if...else statement
+   (C) elseif statement
+
+
+=> if(condition) {
+
+       Block 1
+    }
+    elseif(condition) {
+
+       Block 2
+    }
+    elseif(condition) {
+
+       Block 3  
+    }
+    .
+    .
+    .
+    else {
+
+       Block n  
+    }
+*/      
+
+
+// 01.Find the Maximum Value of Two Numbers:
+
+#include <stdio.h>
+#include <conio.h>
+
+void main(){
+
+     int a, b;
+
+     printf( "Enter the Value of First Number =" );
+     scanf( "%d", &a );
+
+     printf( "Enter the Value of Second Number =" );
+     scanf( "%d", &b );
+
+     if( a > b ) {
+          printf( "The Maximum Number is = %d", a );
+     }
+     else{
+          printf( "The Maximum Number is = %d", b );
+     }
+
+     getch();
+}
+
+// 02.Find the Maximum Value of Three Numbers:
+
+#include <stdio.h>
+#include <conio.h>
+
+void main(){
+
+     int a, b, c;
+
+     printf( "Enter the Value of First Number =" );
+     scanf( "%d", &a );
+
+     printf( "Enter the Value of Second Number =" );
+     scanf( "%d", &b );
+
+     printf( "Enter the Value of Second Number =" );
+     scanf( "%d", &c );     
+
+     // scanf( "%d, %d, %d", &a, &b, &c );
+
+     if( a>b && a>c ) {
+          printf( "The Maximum Number is = %d", a );
+     }
+     else if( b>a && b>c ) {
+          printf( "The Maximum Number is = %d", b );
+     }
+     else {
+          printf( "The Maximum Number is = %d", c );          
+     }
+     
+     getch();
+}
+
+// 03. Find Even & Odd Number:
+
+#include <stdio.h>
+#include <conio.h>
+
+void main(){
+
+     int a;
+
+     printf( "Inout Your Value =" );
+     scanf( "%d", &a );
+
+     if( a%2==0 ) {
+          printf( "Your Entered Number is Even" );
+     }
+     else{
+          printf( "Your Entered Number is Odd" );
+     }
+
+     getch();
+}
+
+// 04. Find Positive, Negative & Zero Number:
+
+#include <stdio.h>
+#include <conio.h>
+
+void main(){
+
+     int a;
+
+     printf( "Inout Your Value =" );
+     scanf( "%d", &a );
+
+     if( a > 0 ) {
+          printf( "Your Entered Number is Positive" );
+     }
+     else if( a < 0 ){
+           printf( "Your Entered Number is Negative" );         
+     }
+     else{
+          printf( "Your Entered Number is Zero" );
+     }
 
      getch();
 }
