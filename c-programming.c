@@ -241,7 +241,8 @@ void main() {
  Part:02 (Conditional Statement)
 ********************************/
 
-/* (A) if statement
+/* 
+   (A) if statement
    (B) if...else statement
    (C) elseif statement
 
@@ -507,7 +508,32 @@ void main() {
      getch();
 }
 
-// 10. Determine Increment & Decrement Value:
+/************************
+ Part:03 (Loop Statement)
+*************************/
+
+/* 
+   (A) While Loop
+   =>
+    while (Condition) {
+             Body of Loop;
+     }
+
+   (B) Do Loop / Do-While Loop
+   =>
+    do {
+        Body of Loop;
+     } while (Condition);
+
+   (C) For Loop 
+   =>
+    for (Initialization; Condition; Incrementation / Decrementation ) {
+        Body of Loop;
+     }
+
+*/
+
+// 01. Determine Increment & Decrement Value:
 
 #include <stdio.h>
 #include <conio.h>
@@ -527,6 +553,93 @@ void main() {
 
      printf( "a= %d", a ); // Answer a = 4
 
+     getch();
+}
+
+// 02. Determine Increment & Decrement Value:
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int a=5, x;
+
+     x = a++;
+
+     printf( "x= %d\n", x ); // Answer x = 5
+     printf( "a= %d\n", a ); // Answer a = 6
+
+     x = ++a;
+
+     printf( "x= %d\n", x ); // Answer x = 6
+     printf( "a= %d\n", a ); // Answer a = 6
+
+     x = a--;
+
+     printf( "x= %d\n", x ); // Answer x = 5
+     printf( "a= %d\n", a ); // Answer a = 4
+
+     x = --a;
+
+     printf( "x= %d\n", x ); // Answer x = 4
+     printf( "a= %d\n", a ); // Answer a = 4
+
+     getch();
+}
+
+// 03. Find Odd Number (1-10):
+
+// While loop =>
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+     int i=1;
+
+     while(i<=10){
+
+          printf(" %4d", i);
+          i=i+2;
+     }
+
+     getch();
+}
+
+// Do-While Loop =>
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int i=1;
+
+     do{
+          i=i+2;
+          printf(" %4d", i);
+
+     }
+     while(i<=10);
+          
+     getch();
+}
+
+// For Loop:
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int i;
+
+     for( i=1; i<=10; i=i+2){
+
+          printf( "%5d", i );
+     }
+          
      getch();
 }
 
