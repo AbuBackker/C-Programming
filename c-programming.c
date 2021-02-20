@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main() {
 
      printf( "Hello World" );
      getch();
@@ -20,7 +20,7 @@ void main(){
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main() {
 
      printf( "Hello World\n" );
      printf( "I Love Bangladesh\n" );
@@ -32,7 +32,7 @@ void main(){
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main() {
 
      int a, b, sum;
 
@@ -55,7 +55,7 @@ void main(){
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main() {
 
      int a, b, c, sum, avg;
 
@@ -81,7 +81,7 @@ void main(){
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main() {
 
      float a, b, area;
 
@@ -103,7 +103,7 @@ void main(){
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main() {
 
      float a, b, area;
 
@@ -125,7 +125,7 @@ void main(){
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main() {
 
      float r, area;
 
@@ -144,7 +144,7 @@ void main(){
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main() {
 
      float r, circumference;
 
@@ -164,7 +164,7 @@ void main(){
 #include <conio.h>
 #include <math.h>
 
-void main(){
+void main() {
 
      float a, x;
 
@@ -184,7 +184,7 @@ void main(){
 #include <conio.h>
 #include <math.h>
 
-void main(){
+void main() {
 
      float a, p;
 
@@ -203,7 +203,7 @@ void main(){
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main() {
 
      float c, f;
 
@@ -222,7 +222,7 @@ void main(){
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main() {
 
      float f, c;
 
@@ -273,7 +273,7 @@ void main(){
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main() {
 
      int a, b;
 
@@ -298,7 +298,7 @@ void main(){
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main() {
 
      int a, b, c;
 
@@ -331,17 +331,17 @@ void main(){
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main() {
 
      int a;
 
-     printf( "Inout Your Value =" );
+     printf( "Input Your Value =" );
      scanf( "%d", &a );
 
      if( a%2==0 ) {
           printf( "Your Entered Number is Even" );
      }
-     else{
+     else {
           printf( "Your Entered Number is Odd" );
      }
 
@@ -353,17 +353,17 @@ void main(){
 #include <stdio.h>
 #include <conio.h>
 
-void main(){
+void main() {
 
      int a;
 
-     printf( "Inout Your Value =" );
+     printf( "Input Your Value =" );
      scanf( "%d", &a );
 
      if( a > 0 ) {
           printf( "Your Entered Number is Positive" );
      }
-     else if( a < 0 ){
+     else if( a < 0 ) {
            printf( "Your Entered Number is Negative" );         
      }
      else{
@@ -372,3 +372,161 @@ void main(){
 
      getch();
 }
+
+// 05. Determine Letter Grade:
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int marks;
+
+     printf( "Input Your Value =" );
+     scanf( "%d", &marks );
+
+     if( marks < 0 && marks > 100 ) {
+          printf( "Invalid Marks" );
+     }
+     else if( marks <= 80 && marks >= 100 ) {
+          printf( "You Got A+" );         
+     }
+     else if( marks <= 70 && marks >= 79 ) {
+          printf( "You Got A" );         
+     }
+     else if( marks <= 60 && marks >= 69 ) {
+          printf( "You Got A-" );         
+     }
+     else if( marks <= 50 && marks >= 59 ) {
+          printf( "You Got B" );         
+     }
+     else if( marks <= 40 && marks >= 49 ) {
+          printf( "You Got C" );         
+     }
+     else if( marks <= 33 && marks >= 39 ) {
+          printf( "You Got D" );         
+     }
+     else {
+          printf( "You Got F" )
+     }
+
+     getch();
+}
+
+// 06. Determine Leap Year:
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int year;
+
+     printf( "Input Your Value =" );
+     scanf( "%d", &year );
+
+     if( year%400==0  || year%4==0 && year%100!=0 ) {
+          printf( "Leap Year" );
+     }
+     else {
+          printf( "Not Leap Year" );
+     }
+
+     getch();
+}
+
+// 07. Determine Capital Letter & Small Letter:
+
+#include <stdio.h>
+#include <conio.h>
+#include <ctype.h>
+
+void main() {
+
+     char x;
+
+     printf( "Input Your Character =" );
+     scanf( "%c", &x );
+
+     if( x >= 'a' && x <= 'z' ) {
+          printf( "Small Letter" );
+     }
+     else if ( x >= 'A' && x <= 'Z' ) {
+          printf( "Capital Letter" );
+     }
+     else {
+          printf( "It is not a Character" )
+     }
+
+     getch();
+}
+
+// 08. Determine Upper Case to Lower Case:
+
+#include <stdio.h>
+#include <conio.h>
+#include <ctype.h>
+
+void main() {
+
+     char x;
+
+     printf( "Input Your Character =" );
+     scanf( "%c", &x );
+
+     if( x >= 'A' && x <= 'Z' ) {
+          printf( "Small Letter = %c\n", tolower(x) );
+     }
+     else {
+          printf( "It is not a Character" )
+     }
+
+     getch();
+}
+
+// 09. Determine Lower Case to Upper Case:
+
+#include <stdio.h>
+#include <conio.h>
+#include <ctype.h>
+
+void main() {
+
+     char x;
+
+     printf( "Input Your Character =" );
+     scanf( "%c", &x );
+
+     if( x >= 'a' && x <= 'z' ) {
+          printf( "Capital Letter = %c\n", toupper(x) );
+     }
+     else {
+          printf( "It is not a Character" )
+     }
+
+     getch();
+}
+
+// 10. Determine Increment & Decrement Value:
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int a;
+
+     a = 5;
+     ++a; // Pre-Increment
+     // a++ (Post-Increment)
+
+     printf( "a= %d", a ); // Answer a = 6
+
+     --a // Pre-Decrement
+     // a-- (Post-Decrement)
+
+     printf( "a= %d", a ); // Answer a = 4
+
+     getch();
+}
+
