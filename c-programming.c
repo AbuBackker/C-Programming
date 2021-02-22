@@ -513,19 +513,21 @@ void main() {
 *************************/
 
 /* 
-   (A) While Loop
+   (A) While Loop :
    =>
     while (Condition) {
              Body of Loop;
      }
 
-   (B) Do Loop / Do-While Loop
+
+   (B) Do Loop / Do-While Loop :
    =>
     do {
         Body of Loop;
      } while (Condition);
 
-   (C) For Loop 
+
+   (C) For Loop :
    =>
     for (Initialization; Condition; Incrementation / Decrementation ) {
         Body of Loop;
@@ -598,7 +600,7 @@ void main() {
 void main() {
      int i=1;
 
-     while(i<=10){
+     while(i<=10) {
 
           printf(" %4d", i);
           i=i+2;
@@ -616,9 +618,10 @@ void main() {
 
      int i=1;
 
-     do{
-          i=i+2;
+     do {
+
           printf(" %4d", i);
+          i=i+2;
 
      }
      while(i<=10);
@@ -635,7 +638,7 @@ void main() {
 
      int i;
 
-     for( i=1; i<=10; i=i+2){
+     for( i=1; i<=10; i=i+2) {
 
           printf( "%5d", i );
      }
@@ -643,3 +646,462 @@ void main() {
      getch();
 }
 
+// 04. Find Even Number ( 1-100 )
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int i;
+
+     for( i=2; i<=100; i=i+2) {
+
+          printf( "%5d", i );
+     }
+          
+     getch();
+}
+
+/*********************
+Part:3.1 (Sum Series)
+*********************/
+
+// 05. Find Sum of the Series 1 + 2 + 3 + 4 + ... + 100
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int i, s;
+
+     s = 0;
+
+     for( i=1; i<=100; i++) {
+
+          s = s + i;
+          // printf( "%5d", i );
+     }
+
+     printf( "The Sum is : %5d", s );
+          
+     getch();
+}
+
+// 06. Find Sum of the Series 1 + 2 + 3 + 4 + ... + n
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int i, s, n;
+
+     printf( "Input Your Value :" );
+     scanf( "%d", &n );
+
+     s = 0;
+
+     for( i=1; i<=n; i++) {
+
+          s = s + i;
+     }
+
+     printf( "The Sum is : %5d", s );
+          
+     getch();
+}
+
+// 07. Find Sum of the Series 1² + 2² + 3² + ... + n²
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int i, s, n;
+
+     printf( "Input Your Value :" );
+     scanf( "%d", &n );
+
+     s = 0;
+
+     for( i=1; i<=n; i++) {
+
+          s = s + i*i; // s = s + pow(i,2);
+     }
+
+     printf( "The Sum is : %5d", s );
+          
+     getch();
+}
+
+// 08. Find Sum of the Series 2² + 4² + 6² + ... + n²
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int i, s, n;
+
+     printf( "Input Your Value :" );
+     scanf( "%d", &n );
+
+     s = 0;
+
+     for( i=2; i<=n; i=i+2) {
+
+          s = s + i*i; // s = s + pow(i,2);
+     }
+
+     printf( "The Sum is : %5d", s );
+          
+     getch();
+}
+
+// 09. Find Sum of the Series 1³ + 2³ + 3³ + ... + n³
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int i, s, n;
+
+     printf( "Input Your Value :" );
+     scanf( "%d", &n );
+
+     s = 0;
+
+     for( i=1; i<=n; i++) {
+
+          s = s + i*i*i; // s = s + pow(i,3);
+     }
+
+     printf( "The Sum is : %5d", s );
+          
+     getch();
+}
+
+// 10. Sum of the Series 1^1 + 2^2 + 3^3 + ... + n^n
+
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+void main() {
+
+     int i, s, n;
+
+     printf( "Input Your Value :" );
+     scanf( "%d", &n );
+
+     s = 0;
+
+     for( i=1; i<=n; i++) {
+
+          s = s + pow(i,i);
+     }
+
+     printf( "The Sum is : %5d", s );
+          
+     getch();
+}
+
+// 10. Sum of the Series 2^2 - 3^3 + 4^4 - 5^5 + ... + n^n
+
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+void main() {
+
+     int i, s, n;
+
+     printf( "Input Your Value :" );
+     scanf( "%d", &n );
+
+     s = 0;
+
+     for( i=2; i<=n; i++) {
+
+          s = s + pow(i,i) * pow(-1,i);
+     }
+
+     printf( "The Sum is : %d", s );
+          
+     getch();
+}
+
+// 12. Sum of the Series 1/2 + 2/3 + 3/4 + ... + n
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int i, n;
+     float s = 0;
+
+     printf( "Input Your Value :" );
+     scanf( "%d", &n );
+
+     for( i=1; i<=n; i++) {
+
+          s = s + (float) i/(i+1);
+     }
+
+     printf( "The Sum is : %f", s );
+          
+     getch();
+}
+
+/********************************
+Part:3.2 (Multiplication Series)
+********************************/
+
+// 13. Find the Series 1 * 2 * 3 * 4 * ... * 100
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int i, m;
+
+     m = 1;
+
+     for( i=1; i<=100; i++) {
+
+          m = m * i;
+          // printf( "%5d", i );
+     }
+
+     printf( "The Result is : %d", m );
+          
+     getch();
+}
+
+// 14. Find the Series 1 * 2 * 3 * 4 * ... * n
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int i, m, n;
+
+     printf( "Input Your Value :" );
+     scanf( "%d", &n );
+
+     m = 1;
+
+     for( i=1; i<=n; i++) {
+
+          m = m * i;
+     }
+
+     printf( "The Result is : %d", m );
+          
+     getch();
+}
+
+// 15. Find the Series 1² * 2² * 3² * ... * n²
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int i, m, n;
+
+     printf( "Input Your Value :" );
+     scanf( "%d", &n );
+
+     m = 1;
+
+     for( i=1; i<=n; i++) {
+
+          m = m * i*i;
+     }
+
+     printf( "The Result is : %d", m );
+          
+     getch();
+}
+
+// 16. Find the Series 2² * 4² * 6² * ... * n²
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int i, m, n;
+
+     printf( "Input Your Value :" );
+     scanf( "%d", &n );
+
+     m = 1;
+
+     for( i=2; i<=n; i=i+2) {
+
+          m = m * i*i; // m = m * pow(i,2);
+     }
+
+     printf( "The Result is : %d", m );
+          
+     getch();
+}
+
+// 17. Find the Series 1³ + 2³ + 3³ + ... + n³
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int i, m, n;
+
+     printf( "Input Your Value :" );
+     scanf( "%d", &n );
+
+     m = 1;
+
+     for( i=1; i<=n; i++) {
+
+          m = m + i*i*i; // m = m * pow(i,3);
+     }
+
+     printf( "The Result is : %d", m );
+          
+     getch();
+}
+
+// 18. Find the Series 1^1 + 2^2 + 3^3 + ... + n^n
+
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+void main() {
+
+     int i, m, n;
+
+     printf( "Input Your Value :" );
+     scanf( "%d", &n );
+
+     m = 1;
+
+     for( i=1; i<=n; i++) {
+
+          m = m + pow(i,i);
+     }
+
+     printf( "The Result is : %d", m );
+          
+     getch();
+}
+
+/*****************
+Part:3.3 (Others)
+*****************/
+
+// 19. Find GCD
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int a, b, c, x, y;
+
+     printf( "Input Your First Value :" );
+     scanf( "%d", &x );
+
+     printf( "Input Your Second Value :" );
+     scanf( "%d", &y );     
+
+     if( x>y ) {
+          b = x;
+          a = y;
+     }
+     else {
+          a = x;
+          b = y;
+     }
+
+     while( a!=0 ) {
+           c = b % a;
+           b = a;
+           a = c;
+     }
+
+     printf( "The GCD is : %d", b );
+          
+     getch();
+}
+
+// 20. Find LCM
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int a, b, c, x, y;
+
+     printf( "Input Your First Value :" );
+     scanf( "%d", &x );
+
+     printf( "Input Your Second Value :" );
+     scanf( "%d", &y );     
+
+     if( x>y ) {
+          b = x;
+          a = y;
+     }
+     else {
+          a = x;
+          b = y;
+     }
+
+     while( a!=0 ) {
+           c = b % a;
+           b = a;
+           a = c;
+     }
+
+     int l;
+
+     l = ( x*y ) / b;
+
+     printf( "The LCM is : %d", l );
+          
+     getch();
+}
+
+// 21. Find Fibonacci Number
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int a=1, b=1, c=0, n;
+
+     printf( "Input Your Value :" );
+     scanf( "%d", &n );   
+
+     while( c<=0 ) {
+           c = a + b;
+           a = b;
+           b = c;
+     }
+
+     printf( "The Fibonacci Number is : %d", c );
+          
+     getch();
+}
