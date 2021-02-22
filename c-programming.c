@@ -1093,15 +1093,18 @@ void main() {
      int a=1, b=1, c=0, n;
 
      printf( "Input Your Value :" );
-     scanf( "%d", &n );   
+     scanf( "%d", &n );  
 
-     while( c<=0 ) {
+     printf( "Your Fibonacci Series Is =%d, %d",a,b );
+ 
+     while( c<=n ) {
            c = a + b;
            a = b;
            b = c;
-     }
 
-     printf( "The Fibonacci Number is : %d", c );
+     printf( ",%d", c );
+
+     }
           
      getch();
 }
